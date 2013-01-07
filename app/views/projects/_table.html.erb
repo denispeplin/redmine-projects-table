@@ -1,4 +1,4 @@
-<table class="list issues">
+<table class="list issues projects">
   <thead>
     <tr>
       <th>Name</th>
@@ -9,8 +9,12 @@
     <% projects.each do |project| %>
       <tr class="<%= cycle('odd', 'even') %>">
         <td><%= link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}") %></td>
-        <td><%= project.description %></td>
+        <td><p class="someclass"><%= project.description %></p></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'projects', :plugin => 'projects_table' %>
+<% end %>
