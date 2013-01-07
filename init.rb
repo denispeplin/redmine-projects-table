@@ -6,3 +6,6 @@ Redmine::Plugin.register :projects_table do
   url 'https://github.com/denispeplin/redmine-projects-table'
   author_url 'https://github.com/denispeplin'
 end
+
+require 'projects_table'
+ProjectsHelper.send(:include, ProjectsTable)
