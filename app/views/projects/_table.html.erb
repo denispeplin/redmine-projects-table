@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>Name</tr>
+    <tr>Description</tr>
+  </thead>
+  <tbody>
+    <% projects.each do |project| %>
+      <tr>
+        <td><%= link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}") %></td>
+        <td><%= project.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
