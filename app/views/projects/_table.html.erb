@@ -6,8 +6,8 @@
     </tr>
   </thead>
   <tbody>
-    <% projects.each do |project| %>
-      <tr class="<%= cycle('odd', 'even') %> project">
+    <% project_tree(projects) do |project, level| %>
+      <tr class="<%= cycle('odd', 'even') %> <%= project.css_classes %> <%= level > 0 ? "idnt idnt-#{level}" : nil %>">
         <td class="name">
           <span>
             <%= link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}") %>
