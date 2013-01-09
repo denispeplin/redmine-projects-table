@@ -13,7 +13,7 @@
             <%= link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}") %>
           </span>
         </td>
-        <td><p class="someclass"><%= project.description %></p></td>
+        <td><%= project.description %></td>
       </tr>
     <% end %>
   </tbody>
