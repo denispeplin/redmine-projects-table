@@ -1,4 +1,4 @@
-<table class="list issues projects">
+<table class="list projects">
   <thead>
     <tr>
       <th>Name</th>
@@ -7,8 +7,12 @@
   </thead>
   <tbody>
     <% projects.each do |project| %>
-      <tr class="<%= cycle('odd', 'even') %>">
-        <td><%= link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}") %></td>
+      <tr class="<%= cycle('odd', 'even') %> project">
+        <td class="name">
+          <span>
+            <%= link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}") %>
+          </span>
+        </td>
         <td><p class="someclass"><%= project.description %></p></td>
       </tr>
     <% end %>
