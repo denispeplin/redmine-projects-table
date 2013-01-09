@@ -1,8 +1,8 @@
 Redmine::Plugin.register :projects_table do
   name 'Projects Table plugin'
   author 'Denis Peplin'
-  description 'This is a plugin for Redmine'
-  version '0.0.1'
+  description 'This plugin adds table view to Projects page'
+  version '0.0.2'
   url 'https://github.com/denispeplin/redmine-projects-table'
   author_url 'https://github.com/denispeplin'
 end
