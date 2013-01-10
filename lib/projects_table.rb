@@ -8,7 +8,7 @@ module ProjectsTable
 
   module InstanceMethods
     def render_project_hierarchy_with_projects_table(projects)
-      render('table', projects: projects.sort_by(&:lft))
+      render('table', :projects => projects.sort_by(&:lft))
     end
   end
 end
