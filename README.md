@@ -11,6 +11,8 @@ Add table view to Projects page, solving Redmine's [issue #2117](http://www.redm
 This plugin should be placed into `projects_table` directory inside Redmine's
 `plugins` directory.
 
+Version [0.0.3](http://www.redmine.org/attachments/download/8773/projects_table.tgz)
+
 To install latest version from Github, `cd` into `plugins` and run
 
 ```bash
