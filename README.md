@@ -2,6 +2,8 @@
 
 Add table view to Projects page, solving Redmine's [issue #2117](http://www.redmine.org/issues/2117)
 
+[Plugin's page at redmine.org](http://www.redmine.org/plugins/projects_table).
+
 ## Screenshot
 
 [how it looks like](https://raw.github.com/wiki/denispeplin/redmine-projects-table/projects_table_0.0.2_1.png)
