@@ -13,7 +13,9 @@
             <%= link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}") %>
           </span>
         </td>
-        <td><%= project.description %></td>
+        <td class="wiki description">
+          <%= textilizable(project.short_description, project: project) if project.description.present? %>
+        </td>
       </tr>
     <% end %>
   </tbody>
