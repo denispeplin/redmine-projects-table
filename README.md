@@ -4,7 +4,7 @@ Add table view to Projects page, solving Redmine's [issue #2117](http://www.redm
 
 [Plugin's page at redmine.org](http://www.redmine.org/plugins/projects_table).
 
-Note that Redmine versions below 2.1 are not supported.
+Note that Redmine versions below 2.1 are not supported at this moment. Please send pull request if you have a fix.
 
 ## Screenshot
 
