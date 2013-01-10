@@ -14,7 +14,7 @@
           </span>
         </td>
         <td class="wiki description">
-          <%= textilizable(project.short_description, project: project) if project.description.present? %>
+          <%= textilizable(project.short_description, :project => project) if project.description.present? %>
         </td>
       </tr>
     <% end %>
