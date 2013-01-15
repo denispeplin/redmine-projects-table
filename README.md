@@ -15,7 +15,8 @@ Note that Redmine versions below 2.1 are not supported at this moment. Please se
 This plugin should be placed into `projects_table` directory inside Redmine's
 `plugins` directory.
 
-Version [0.0.3](http://www.redmine.org/attachments/download/8773/projects_table.tgz)
+Download version [0.0.4](http://www.redmine.org/attachments/download/8819/projects_table.zip)
+archive and unpack it there.
 
 To install latest version from Github, `cd` into `plugins` and run
 
