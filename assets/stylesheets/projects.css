@@ -1,3 +1,24 @@
 .projects th {
   text-align: left;
 }
+
+.projects .root {
+  font-weight: bold;
+}
+
+.projects .child {
+  color: gray;
+  font-weight: bold;
+}
+
+.projects .leaf {
+  font-weight: normal;
+}
+
+.projcreated {
+  color: gray;
+}
+
+.closed {
+  color: red !important;
+}
