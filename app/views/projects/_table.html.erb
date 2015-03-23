@@ -23,18 +23,11 @@
 </table>
 
 <% content_for :header_tags do %>
-  <%= stylesheet_link_tag 'jquery.treegrid', :plugin => 'projects_table' %>
+  <%= stylesheet_link_tag 'jquery.treegrid.css', :plugin => 'projects_table' %>
   
-  <%= javascript_include_tag 'sorttable', :plugin => 'projects_table' %>
+  <%= javascript_include_tag 'sorttable.js', :plugin => 'projects_table' %>
   
-  <%= javascript_include_tag 'jquery.treegrid', :plugin => 'projects_table' %>
-  <%= javascript_include_tag 'jquery.cookie', :plugin => 'projects_table' %>
-      <script type="text/javascript">
-        $(document).ready(function() {
-          $('.tree').treegrid({
-            'initialState': 'collapsed',
-            'saveState': true,
-          });
-        });
-      </script>
+  <%= javascript_include_tag 'jquery.treegrid.js', :plugin => 'projects_table' %>
+  <%= javascript_include_tag 'jquery.cookie.js', :plugin => 'projects_table' %>
+    <%= javascript_include_tag 'createTree.js', :plugin => 'projects_table' %>
 <% end %>
