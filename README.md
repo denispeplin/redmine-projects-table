@@ -1,5 +1,3 @@
-[![Still Maintained](http://stillmaintained.com/denispeplin/redmine-projects-table.png)](http://stillmaintained.com/denispeplin/redmine-projects-table)
-
 # The project is not maintained, and looking for new maintainer.
 
 # ProjectsTable
