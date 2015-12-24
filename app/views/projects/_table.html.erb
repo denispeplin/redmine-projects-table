@@ -1,20 +1,21 @@
-<table class="list projects">
+
+<table class="list projects tree sortable">
   <thead>
     <tr>
       <th><%= t :field_name %></th>
-      <th><%= t :field_description %></th>
+      <th><%= t :field_created_on %></th>
     </tr>
   </thead>
   <tbody>
     <% project_tree(projects) do |project, level| %>
-      <tr class="<%= cycle('odd', 'even') %> <%= project.css_classes %> <%= level > 0 ? "idnt idnt-#{level}" : nil %>">
+      <tr class="<%= cycle('odd', 'even') %> <%= level > 0 ? "treegrid-#{project.id} treegrid-parent-#{project.parent.id}" : "treegrid-#{project.id}" %>">
         <td class="name">
           <span>
             <%= link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}") %>
           </span>
         </td>
-        <td class="wiki description">
-          <%= textilizable(project.short_description, :project => project) if project.description.present? %>
+        <td class="projcreated">
+          <%= format_date(project.created_on) %>
         </td>
       </tr>
     <% end %>
@@ -22,5 +23,11 @@
 </table>
 
 <% content_for :header_tags do %>
-  <%= stylesheet_link_tag 'projects', :plugin => 'projects_table' %>
+  <%= stylesheet_link_tag 'jquery.treegrid.css', :plugin => 'projects_table' %>
+  
+  <%= javascript_include_tag 'sorttable.js', :plugin => 'projects_table' %>
+  
+  <%= javascript_include_tag 'jquery.treegrid.js', :plugin => 'projects_table' %>
+  <%= javascript_include_tag 'jquery.cookie.js', :plugin => 'projects_table' %>
+    <%= javascript_include_tag 'createTree.js', :plugin => 'projects_table' %>
 <% end %>
