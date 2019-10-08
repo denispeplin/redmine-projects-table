@@ -2,7 +2,8 @@ module ProjectsTable
   def self.included(base)
     base.send(:include, InstanceMethods)
     base.class_eval do
-      alias_method_chain :render_project_hierarchy, :projects_table
+      alias_method :render_project_hierarchy_without_projects_table, :render_project_hierarchy
+      alias_method :render_project_hierarchy, :render_project_hierarchy_with_projects_table
     end
   end
 
